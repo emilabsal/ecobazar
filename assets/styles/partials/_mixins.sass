@@ -1,0 +1,8 @@
+@mixin flex($ai: center, $jc: center)
+  display: flex
+  align-items: $ai
+  justify-content: $jc
+
+@mixin hover()
+  @media hover
+    @content
