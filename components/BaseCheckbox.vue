@@ -10,7 +10,6 @@
       type="checkbox"
       hidden
     />
-    <!-- {{ typeof model }} -->
     <span class="checkbox__box">
       <NuxtIcon
         v-if="typeof model === 'boolean' ? model : model.includes($attrs.value)"
