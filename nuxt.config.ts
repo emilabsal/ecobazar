@@ -10,6 +10,7 @@ export default defineNuxtConfig({
           additionalData: `
             @use "~/assets/styles/partials/_variables.sass" as * \n
             @use "~/assets/styles/partials/_mixins.sass" as * \n
+            @use "~/assets/styles/partials/_fonts.sass" as * \n
           `,
         },
       },

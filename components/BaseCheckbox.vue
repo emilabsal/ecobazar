@@ -2,7 +2,7 @@
   <label
     :class="checkboxClass"
     tabindex="0"
-    @keydown.enter.space="$el.click()"
+    @keydown.enter.space="onKeydown"
   >
     <input
       v-bind="$attrs"
@@ -31,12 +31,21 @@ const attrs = useAttrs();
 const checkboxClass = computed(() => [
   'checkbox',
   {
-    checkbox_checked:
-      typeof model.value === 'boolean'
-        ? model.value
-        : model.value.includes(attrs.value),
+    checkbox_checked: isChecked.value,
   },
 ]);
+
+isChecked = computed(() => {
+  if (typeof model.value === 'boolean') {
+    return model.value;
+  }
+
+  return model.value.includes(attrs.value);
+});
+
+function onKeydown() {
+  $el.click();
+}
 </script>
 
 <style lang="sass" scoped>

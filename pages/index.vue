@@ -1,14 +1,5 @@
 <template>
-  <div class="wrapper">
-    <BaseButton
-      label="Small Fill"
-      icon-right="arrow"
-    />
-    <BaseInput
-      placeholder="hello"
-      status="warning"
-    />
-  </div>
+  <div class="wrapper"></div>
 </template>
 
 <script setup>
